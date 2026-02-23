@@ -11,11 +11,10 @@ Turn a topic or rough outline into **production-ready** carousel assets — JSON
 ## Sample Output
 
 <p align="center">
-  <img src="Sample/image 1.png" alt="Example cover slide" width="320" />
-  <img src="Sample/image 3.png" alt="Example workflow slide" width="320" />
+  <img src="Sample/cover.png" alt="Cover slide" width="270" />
+  <img src="Sample/framework.png" alt="Framework slide with cards panel" width="270" />
+  <img src="Sample/workflow.png" alt="Workflow slide with cards panel" width="270" />
 </p>
-
-> Full sample deck in [`Sample/`](Sample/)
 
 ---
 
