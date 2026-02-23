@@ -24,10 +24,16 @@ output.log
 *.log
 !logs/changes.md
 
-# Personal content specs (not for public repo)
+# Personal content specs and assets (not for public repo)
+content/final/20260209_durriya_convocation.json
 content/final/20260219_maaz_gsk_farewell.json
 content/final/20260223_maaz_gsk_farewell_production.json
 brand/graduation-memes-13.png
+brand/assets/Durriya Avatar.png
+brand/assets/avatar.png
+brand/assets/gsk_logo.png
+brand/assets/gsk_logo_2.png
+Sample/
 
 # OS/Editor
 .DS_Store

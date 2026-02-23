@@ -145,7 +145,7 @@
     "position": "bottom-center",
     "avatarSize": 40,
     "marginBottom": 60,
-    "file": "avatar.png"
+    "file": "placeholder.png"
   },
   "constraints": {
     "headline": {
