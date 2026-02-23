@@ -1,0 +1,250 @@
+{
+  "slug": "20260223_antigravity_master_designer",
+  "title": "Anti-Gravity 2026 - Operational Workflows",
+  "audience": "LinkedIn builders, engineering leaders, and AI operators",
+  "createdAt": "2026-02-23T16:58:00Z",
+  "profile": {
+    "name": "Maaz Siddiqui",
+    "avatar": "avatar.png"
+  },
+  "showRepostBadge": true,
+  "colorOverride": {
+    "primary": "#0A6C8F",
+    "gradient": "#0B5E78",
+    "lightAccent": "#E6F7FB",
+    "secondary": "#1A1A2E"
+  },
+  "slides": [
+    {
+      "type": "cover",
+      "headline": "Anti-Gravity in 2026: __Beyond Basic Usage__",
+      "subtitle": "Practical workflows teams can run now",
+      "accentText": "Agent mode | MCP context | extension stack"
+    },
+    {
+      "type": "framing",
+      "headline": "What changed?",
+      "accentText": "From assistant chat to execution systems",
+      "bullets": [
+        "Agent mode can plan and execute in one loop",
+        "MCP brings live tools and data into context",
+        "Extension ecosystems expand model choice"
+      ],
+      "diagram": [
+        "Plan",
+        "Execute",
+        "Verify",
+        "Scale"
+      ]
+    },
+    {
+      "type": "body",
+      "intent": "framework",
+      "headline": "The stack that creates leverage",
+      "introText": "Real gains come from **agent mode + MCP + review discipline**",
+      "bullets": [
+        "Use one control layer for planning and execution",
+        "Attach real systems instead of copy-paste context",
+        "Keep output auditable before shipping"
+      ],
+      "visual": {
+        "mode": "cards",
+        "cards": [
+          {
+            "icon": "1",
+            "title": "Execution Layer",
+            "detail": "Run scoped tasks with clear completion criteria."
+          },
+          {
+            "icon": "2",
+            "title": "Data Layer",
+            "detail": "Connect live tools and sources through MCP."
+          },
+          {
+            "icon": "3",
+            "title": "Control Layer",
+            "detail": "Review artifacts before merge or deploy."
+          }
+        ]
+      }
+    },
+    {
+      "type": "body",
+      "intent": "workflow",
+      "headline": "Workflow 1: Data-aware engineering loop",
+      "introText": "Ground implementation decisions in **live schema context**",
+      "bullets": [
+        "Inspect models and relationships before coding",
+        "Generate and run SQL in the same flow",
+        "Validate output against business semantics"
+      ],
+      "visual": {
+        "mode": "cards",
+        "cards": [
+          {
+            "icon": "1",
+            "title": "Schema Read",
+            "detail": "Start from trusted structures, not assumptions."
+          },
+          {
+            "icon": "2",
+            "title": "Query Loop",
+            "detail": "Iterate faster with execution in context."
+          },
+          {
+            "icon": "3",
+            "title": "Semantic Check",
+            "detail": "Align metrics to business definitions."
+          }
+        ]
+      }
+    },
+    {
+      "type": "body",
+      "intent": "workflow",
+      "headline": "Workflow 2: Voice agent factory",
+      "introText": "Ship voice systems by splitting work into **specialist lanes**",
+      "bullets": [
+        "Lane 1 defines telephony and webhook contracts",
+        "Lane 2 builds STT, orchestration, and tools",
+        "Lane 3 validates browser and API behavior"
+      ],
+      "visual": {
+        "mode": "cards",
+        "cards": [
+          {
+            "icon": "1",
+            "title": "Contract First",
+            "detail": "Stabilize interfaces before deep implementation."
+          },
+          {
+            "icon": "2",
+            "title": "Pipeline Build",
+            "detail": "Compose speech flow with modular tool calls."
+          },
+          {
+            "icon": "3",
+            "title": "Behavior Review",
+            "detail": "Verify end-to-end reliability before rollout."
+          }
+        ]
+      }
+    },
+    {
+      "type": "body",
+      "intent": "workflow",
+      "headline": "Workflow 3: Multi-model extension cockpit",
+      "introText": "Keep AG as mission control and route tasks to the **best-fit model**",
+      "bullets": [
+        "Use extension channels where specialization helps",
+        "Assign model by task type, not preference",
+        "Centralize review and release decisions"
+      ],
+      "visual": {
+        "mode": "cards",
+        "cards": [
+          {
+            "icon": "1",
+            "title": "Model Routing",
+            "detail": "Pick the right engine per task boundary."
+          },
+          {
+            "icon": "2",
+            "title": "Extension Bridge",
+            "detail": "Use external tooling without fragmenting control."
+          },
+          {
+            "icon": "3",
+            "title": "Release Gate",
+            "detail": "Approve through one operational command center."
+          }
+        ]
+      }
+    },
+    {
+      "type": "body",
+      "intent": "workflow",
+      "headline": "Workflow 4: MCP reliability hardening",
+      "introText": "Treat connectors like infrastructure as your stack grows",
+      "bullets": [
+        "Use gateway patterns to reduce reconnect churn",
+        "Standardize env and path configuration",
+        "Track failures and recovery loops per project"
+      ],
+      "visual": {
+        "mode": "cards",
+        "cards": [
+          {
+            "icon": "1",
+            "title": "Gateway Pattern",
+            "detail": "Stabilize connection handling across tools."
+          },
+          {
+            "icon": "2",
+            "title": "Config Discipline",
+            "detail": "Use explicit variables and deterministic paths."
+          },
+          {
+            "icon": "3",
+            "title": "Failure Ops",
+            "detail": "Observe and tune reconnect behavior continuously."
+          }
+        ]
+      }
+    },
+    {
+      "type": "body",
+      "intent": "transition",
+      "headline": "Adoption map for week one",
+      "introText": "Roll out in phases so teams gain confidence without chaos",
+      "bullets": [
+        "Phase 1: single-agent tasks with review rituals",
+        "Phase 2: attach one MCP connector to delivery",
+        "Phase 3: split roles into specialist agents"
+      ],
+      "visual": {
+        "mode": "chart",
+        "chart": {
+          "type": "line",
+          "title": "Operational Maturity by Phase",
+          "series": [
+            {
+              "label": "Phase 1",
+              "value": 1
+            },
+            {
+              "label": "Phase 2",
+              "value": 2
+            },
+            {
+              "label": "Phase 3",
+              "value": 3
+            },
+            {
+              "label": "Phase 4",
+              "value": 4
+            }
+          ],
+          "footnote": "Illustrative maturity index for sequencing adoption."
+        }
+      }
+    },
+    {
+      "type": "cta",
+      "headline": "Ready to operationalize __Anti-Gravity__?",
+      "ctaText": "Comment AG and I will share the rollout map",
+      "handle": "@maazsiddiqui"
+    }
+  ],
+  "caption": "Anti-Gravity is most useful when you treat it as an execution system, not just a coding chat surface.\n\nThis deck breaks down practical workflows teams can run today:\n- Data-aware engineering loop\n- Voice agent factory\n- Multi-model extension cockpit\n- MCP reliability hardening\n- Week-one adoption map\n\nIf you want the exact implementation sequence I use with teams, comment AG.\n\n@maazsiddiqui",
+  "metadata": {
+    "version": "2.0.0",
+    "generatedBy": "codex_subagent_master_pipeline",
+    "sources": [
+      "https://developers.google.com/gemini-code-assist/docs/use-agentic-chat-pair-programmer",
+      "https://modelcontextprotocol.io/introduction",
+      "https://open-vsx.org/"
+    ],
+    "templateVersion": "2.1.0"
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "slug": "20260223_regression_duplicate_cards_fail",
+  "title": "Regression - Duplicate Cards Must Fail",
+  "audience": "QA",
+  "createdAt": "2026-02-23T16:23:00Z",
+  "profile": {
+    "name": "Tester",
+    "avatar": "avatar.png"
+  },
+  "showRepostBadge": false,
+  "slides": [
+    {
+      "type": "cover",
+      "headline": "Duplicate Card Guardrail",
+      "subtitle": "Validation should block mirrored panel copy"
+    },
+    {
+      "type": "framing",
+      "headline": "Test Setup",
+      "accentText": "This fixture is expected to fail",
+      "bullets": [
+        "Cards intentionally repeat bullets",
+        "Validator should catch duplication",
+        "Deck should fail until corrected"
+      ],
+      "diagram": [
+        "Input",
+        "Detect",
+        "Fail",
+        "Fix"
+      ]
+    },
+    {
+      "type": "body",
+      "intent": "framework",
+      "headline": "Duplicated Panel Example",
+      "introText": "Panel cards below intentionally mirror the bullets",
+      "bullets": [
+        "Connect live schemas from MCP",
+        "Run SQL in one flow",
+        "Validate metrics before shipping"
+      ],
+      "visual": {
+        "mode": "cards",
+        "cards": [
+          {
+            "title": "Connect live schemas from MCP",
+            "detail": "Connect live schemas from MCP"
+          },
+          {
+            "title": "Run SQL in one flow",
+            "detail": "Run SQL in one flow"
+          },
+          {
+            "title": "Validate metrics before shipping",
+            "detail": "Validate metrics before shipping"
+          }
+        ]
+      }
+    },
+    {
+      "type": "body",
+      "intent": "result",
+      "headline": "Expected Validator Outcome",
+      "introText": "Validation should fail with duplicate-card issues",
+      "bullets": [
+        "Issue type should reference visual.cards",
+        "Fix should request non-duplicative cards",
+        "Deck remains blocked until corrected"
+      ]
+    },
+    {
+      "type": "cta",
+      "headline": "Fix then re-run",
+      "ctaText": "Use conceptual cards and validate again",
+      "handle": "@tester"
+    }
+  ],
+  "caption": "Regression fixture expected to fail due duplicate side-panel cards."
+}

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <title>{{title}}</title>
+</head>
+
+<body>
+  <div class="slide slide--{{type}} slide--density-{{densityProfile}}" data-slide-number="{{slideNumber}}">
+
+    <!-- Profile Badge - Top (for cover slides) -->
+    {{#if showProfileTop}}
+    <div class="profile-badge profile-badge--top">
+      {{#if avatarPath}}
+      <img class="profile-badge__avatar" src="{{avatarPath}}" alt="Avatar">
+      {{/if}}
+      <span>{{profileName}}</span>
+    </div>
+    {{/if}}
+
+    <!-- Main Content -->
+    <div class="slide__content">
+
+      <!-- Cover Slide -->
+      {{#if isCover}}
+      <div class="cover-content-card">
+        <div class="slide-icon-chip slide-icon-chip--cover">
+          <span class="slide-icon-chip__emoji" aria-hidden="true">&#x1F680;</span>
+          <span>AI Playbook</span>
+        </div>
+        {{#if coverLogoPath}}
+        <div class="cover-logo">
+          <img src="{{coverLogoPath}}" alt="Logo" class="cover-logo__img">
+        </div>
+        {{/if}}
+        <h1 class="slide__headline slide__headline--cover">{{{headlineHtml}}}</h1>
+        {{#if subtitle}}
+        <p class="slide__subtitle">{{subtitle}}</p>
+        {{/if}}
+        {{#if accentText}}
+        <p class="slide__subtitle slide__subtitle--accent">{{accentText}}</p>
+        {{/if}}
+        {{#if coverImagePath}}
+        <div class="cover-image">
+          <img src="{{coverImagePath}}" alt="Cover visual" class="cover-image__img">
+        </div>
+        {{/if}}
+      </div>
+      {{/if}}
+
+      <!-- Framing Slide -->
+      {{#if isFraming}}
+      <div class="slide-icon-chip slide-icon-chip--framing">
+        <span class="slide-icon-chip__emoji" aria-hidden="true">&#x1F9ED;</span>
+        <span>Context</span>
+      </div>
+      <h1 class="slide__headline slide__headline--large">{{{headlineHtml}}}</h1>
+      {{#if accentText}}
+      <p class="slide__subtitle slide__subtitle--accent">{{accentText}}</p>
+      {{/if}}
+      <div class="divider"></div>
+      <div class="framing-layout">
+        {{#if bullets}}
+        <ul class="slide__bullets slide__bullets--compact">
+          {{#each bulletItems}}
+          <li class="slide__bullet slide__bullet--icon">
+            <span class="slide__bullet-icon" aria-hidden="true">{{icon}}</span>
+            <span class="slide__bullet-text">{{{textHtml}}}</span>
+          </li>
+          {{/each}}
+        </ul>
+        {{/if}}
+        {{#if showDiagram}}
+        <div class="visual-diagram">
+          <div class="diagram-center">
+            <span class="diagram-center__icon">&#x2728;</span>
+          </div>
+          {{#each diagramItems}}
+          <div class="diagram-label">{{label}}</div>
+          {{/each}}
+        </div>
+        {{/if}}
+      </div>
+      {{/if}}
+
+      <!-- Body Slide -->
+      {{#if isBody}}
+      <!-- Decorative Elements -->
+      <div class="decor-curve decor-curve--top-right"></div>
+      <div class="decor-dots decor-dots--bottom-right"></div>
+
+      {{#if showTopChip}}
+      <div class="{{topChipClass}}">
+        <span class="top-chip__icon" aria-hidden="true">{{topChip.icon}}</span>
+        <span>{{topChip.label}}</span>
+      </div>
+      {{/if}}
+      <h1 class="slide__headline">{{{headlineHtml}}}</h1>
+      <div class="divider divider--blue"></div>
+      {{#if introText}}
+      <p class="slide__intro">{{{introText}}}</p>
+      {{/if}}
+      <div class="body-layout {{#if showInfographic}}body-layout--with-panel{{/if}}">
+        {{#if bullets}}
+        <ul class="slide__bullets">
+          {{#each bulletItems}}
+          <li class="slide__bullet slide__bullet--icon">
+            <span class="slide__bullet-icon" aria-hidden="true">{{icon}}</span>
+            <span class="slide__bullet-text">{{{textHtml}}}</span>
+          </li>
+          {{/each}}
+        </ul>
+        {{/if}}
+        {{#if showInfographic}}
+        <aside class="infographic-panel infographic-panel--{{visualMode}}">
+          {{#if showVisualImage}}
+          <figure class="infographic-image">
+            <img src="{{slideVisualPath}}" alt="Slide visual" class="infographic-image__img">
+          </figure>
+          {{/if}}
+          {{#if showVisualChart}}
+          <figure class="infographic-chart">
+            <img src="{{slideVisualPath}}" alt="Chart visual" class="infographic-chart__img">
+            {{#if visualChartFootnote}}
+            <figcaption class="infographic-chart__footnote">{{visualChartFootnote}}</figcaption>
+            {{/if}}
+          </figure>
+          {{/if}}
+          {{#if showVisualStats}}
+          <div class="stats-grid">
+            {{#each visualStats}}
+            <div class="stat-card">
+              <div class="stat-card__value">{{value}}</div>
+              <div class="stat-card__label">{{label}}</div>
+            </div>
+            {{/each}}
+          </div>
+          {{/if}}
+          {{#if showVisualCards}}
+          <div class="insight-list">
+            {{#each visualCards}}
+            <div class="insight-card">
+              <span class="insight-card__icon" aria-hidden="true">{{icon}}</span>
+              <div class="insight-card__content">
+                <p class="insight-card__title">{{title}}</p>
+                <p class="insight-card__detail">{{detail}}</p>
+              </div>
+            </div>
+            {{/each}}
+          </div>
+          {{/if}}
+        </aside>
+        {{/if}}
+      </div>
+      {{#if showMockup}}
+      <div class="mockup-container">
+        <div class="mockup">
+          <div class="mockup__header">
+            <span class="mockup__dot"></span>
+            <span class="mockup__dot"></span>
+          </div>
+          <div class="mockup__content">
+            {{{mockupContent}}}
+          </div>
+        </div>
+        {{#if annotation}}
+        <div class="annotation annotation--right">{{annotation}}</div>
+        {{/if}}
+      </div>
+      {{/if}}
+      {{/if}}
+
+      <!-- CTA Slide -->
+      {{#if isCta}}
+      <div class="slide-icon-chip slide-icon-chip--cta">
+        <span class="slide-icon-chip__emoji" aria-hidden="true">&#x1F4E3;</span>
+        <span>Next Move</span>
+      </div>
+      <h1 class="slide__headline">{{{headlineHtml}}}</h1>
+      {{#if ctaText}}
+      <p class="cta-text">{{ctaText}}</p>
+      {{/if}}
+      {{#if handle}}
+      <p class="cta-handle">{{handle}}</p>
+      {{/if}}
+      {{/if}}
+
+    </div>
+
+    <!-- Profile Badge - Bottom (for body/cta slides) -->
+    {{#if showProfileBottom}}
+    <div class="profile-badge profile-badge--bottom">
+      {{#if avatarPath}}
+      <img class="profile-badge__avatar" src="{{avatarPath}}" alt="Avatar">
+      {{/if}}
+      <span>{{profileName}}</span>
+    </div>
+    {{/if}}
+
+    <!-- Repost Badge -->
+    {{#if showRepostBadge}}
+    <div class="repost-badge">
+      <span class="repost-badge__icon">&#x1F501;</span>
+      <span>Repost This</span>
+    </div>
+    {{/if}}
+
+  </div>
+</body>
+
+</html>

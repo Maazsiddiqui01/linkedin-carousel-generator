@@ -1,0 +1,39 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Playwright Chromium
+        run: npx playwright install chromium
+
+      - name: Render + validate baseline regression
+        run: |
+          npm run render -- content/tests/regression_story_awards.json
+          npm run validate -- content/tests/regression_story_awards.json
+
+      - name: Assert known-bad duplication fixture fails validation
+        run: |
+          npm run render -- content/tests/regression_duplicate_cards_fail.json
+          if npm run validate -- content/tests/regression_duplicate_cards_fail.json; then
+            echo "Expected duplicate-cards fixture to fail, but it passed."
+            exit 1
+          fi

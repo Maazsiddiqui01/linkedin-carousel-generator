@@ -1,0 +1,101 @@
+{
+    "slug": "20260207_claude_opus_4_6",
+    "title": "Claude Opus 4.6: The Complete Guide",
+    "audience": "LinkedIn AI professionals and developers",
+    "createdAt": "2026-02-07T20:15:00Z",
+    "profile": {
+        "name": "Maaz Siddiqui",
+        "avatar": "avatar.png"
+    },
+    "showRepostBadge": true,
+    "slides": [
+        {
+            "type": "cover",
+            "headline": "Claude Opus 4.6 Just Dropped",
+            "subtitle": "5 features that change everything"
+        },
+        {
+            "type": "framing",
+            "headline": "This changes the game",
+            "accentText": "Here's the full breakdown",
+            "bullets": [
+                "**Adaptive Thinking**: Zero config reasoning",
+                "**1M Token Context**: Entire codebases, one prompt",
+                "**Agent Teams**: Parallel AI workers for you"
+            ]
+        },
+        {
+            "type": "body",
+            "stepNumber": 1,
+            "headline": "__Adaptive Thinking__",
+            "introText": "Claude now **auto-scales** reasoning depth based on task complexity.",
+            "bullets": [
+                "Forget manual budget tokens",
+                "Complex tasks get **deeper analysis**",
+                "Simple tasks stay **fast and cheap**"
+            ]
+        },
+        {
+            "type": "body",
+            "stepNumber": 2,
+            "headline": "__1M Token Context__",
+            "introText": "Process **entire codebases** in a single prompt. No chunking required.",
+            "bullets": [
+                "Analyze **500K+ lines** of code at once",
+                "Long legal and financial docs, no problem",
+                "Your context limit worries? Gone."
+            ]
+        },
+        {
+            "type": "body",
+            "stepNumber": 3,
+            "headline": "__Agent Teams Mode__",
+            "introText": "Spawn **parallel subagents** that collaborate on complex workflows.",
+            "bullets": [
+                "Tasks split into subtasks automatically",
+                "Subagents execute **in parallel**",
+                "Ideal for large codebase debugging"
+            ]
+        },
+        {
+            "type": "body",
+            "stepNumber": 4,
+            "headline": "__Context Compaction__",
+            "introText": "Claude **auto-summarizes** older context. Sessions run forever.",
+            "bullets": [
+                "No more hitting context limits",
+                "Long-running agents stay focused",
+                "Set your threshold via API"
+            ]
+        },
+        {
+            "type": "body",
+            "stepNumber": 5,
+            "headline": "__Effort Levels__",
+            "introText": "Pick your **cost vs quality** sweet spot with 4 tiers.",
+            "bullets": [
+                "**Low**: Fast, budget-friendly",
+                "**Medium**: Balanced output",
+                "**High**: Deep reasoning (default)",
+                "**Max**: Full power for agents"
+            ]
+        },
+        {
+            "type": "cta",
+            "headline": "Want more AI insights?",
+            "ctaText": "Follow for daily automation tips",
+            "handle": "@maazsiddiqui"
+        }
+    ],
+    "caption": "Claude Opus 4.6 just dropped.\n\nHere's what makes it different:\n\n1. Adaptive Thinking: Auto-scales reasoning depth\n2. 1M Token Context: Entire codebases in one prompt\n3. Agent Teams: Parallel subagents for complex tasks\n4. Context Compaction: Infinite agent sessions\n5. Effort Levels: Control cost vs quality\n\nThis is the most capable AI model ever released.\n\nSave this for later.\n\n♻️ Repost to share with your network\n📌 Follow @maazsiddiqui for more AI insights",
+    "metadata": {
+        "version": "1.1.0",
+        "generatedBy": "perplexity-research",
+        "sources": [
+            "https://www.anthropic.com/news/claude-opus-4-6",
+            "https://techcrunch.com/2026/02/05/anthropic-releases-opus-4-6-with-new-agent-teams/",
+            "https://www.datacamp.com/blog/claude-opus-4-6"
+        ],
+        "templateVersion": "1.1.0"
+    }
+}

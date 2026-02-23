@@ -1,0 +1,296 @@
+{
+  "slug": "20260223_antigravity_overseer_masterpiece",
+  "title": "Anti-Gravity 2026: High-Leverage Workflows",
+  "audience": "LinkedIn builders, engineering leaders, and AI operators",
+  "objective": "authority",
+  "narrativeMode": "workflow",
+  "createdAt": "2026-02-23T18:15:00Z",
+  "planner": {
+    "visualCoverageTarget": 0.45,
+    "densityProfile": "balanced",
+    "researchFreshnessDays": 120,
+    "runOverseerChecks": true
+  },
+  "experiments": {
+    "hookVariant": "practical_high_leverage",
+    "ctaVariant": "keyword_comment_blueprint",
+    "notes": "Test concise workflow-led framing with chart-backed adoption close."
+  },
+  "profile": {
+    "name": "Maaz Siddiqui",
+    "avatar": "avatar.png"
+  },
+  "showRepostBadge": true,
+  "colorOverride": {
+    "primary": "#0A7AA3",
+    "gradient": "#075A77",
+    "lightAccent": "#E8F7FC"
+  },
+  "slides": [
+    {
+      "type": "cover",
+      "headline": "Anti-Gravity 2026: __Beyond AI Coding__",
+      "subtitle": "Where agent orchestration compounds",
+      "accentText": "MCP connectors | Multi-model routing | Artifact-first delivery"
+    },
+    {
+      "type": "framing",
+      "headline": "Why teams are paying attention now",
+      "accentText": "From assistant chat to execution systems",
+      "bullets": [
+        "Agent mode can plan and execute multi-step tasks",
+        "MCP links live tools and data into the same flow",
+        "Artifacts keep outputs reviewable before shipping"
+      ],
+      "diagram": [
+        "Plan",
+        "Execute",
+        "Verify",
+        "Scale"
+      ]
+    },
+    {
+      "type": "body",
+      "intent": "framework",
+      "headline": "__Leverage Stack__ for Serious Builds",
+      "introText": "The edge is **orchestration + context + verification**",
+      "bullets": [
+        "One control layer coordinates specialist agents",
+        "Live connectors replace copy-paste context",
+        "Artifact reviews catch drift before release"
+      ],
+      "visual": {
+        "mode": "cards",
+        "cards": [
+          {
+            "icon": "1",
+            "title": "Control Plane",
+            "detail": "Manage plan, execution, and review in one thread."
+          },
+          {
+            "icon": "2",
+            "title": "Context Fabric",
+            "detail": "Attach real docs, repos, and data via MCP."
+          },
+          {
+            "icon": "3",
+            "title": "Orchestration Cadence",
+            "detail": "Time-box planning loops across specialist agents."
+          }
+        ]
+      }
+    },
+    {
+      "type": "body",
+      "intent": "workflow",
+      "headline": "Workflow 1: __Data-aware loop__",
+      "introText": "Build features against **real schema and metric context**",
+      "bullets": [
+        "Inspect tables and relationships before coding",
+        "Generate and run SQL inside the same session",
+        "Validate outputs against semantic definitions"
+      ],
+      "visual": {
+        "mode": "cards",
+        "cards": [
+          {
+            "icon": "1",
+            "title": "Schema Readiness",
+            "detail": "Map entities before writing logic."
+          },
+          {
+            "icon": "2",
+            "title": "Query Iteration",
+            "detail": "Test transformations in context."
+          },
+          {
+            "icon": "3",
+            "title": "Metric Guardrail",
+            "detail": "Review numbers against source semantics."
+          }
+        ]
+      }
+    },
+    {
+      "type": "body",
+      "intent": "workflow",
+      "headline": "Workflow 2: __Voice agent factory__",
+      "introText": "Split voice delivery into **parallel specialist lanes**",
+      "bullets": [
+        "Lane A owns telephony and webhook contracts",
+        "Lane B implements STT, routing, and tool calls",
+        "Lane C validates browser and API behavior"
+      ],
+      "visual": {
+        "mode": "cards",
+        "cards": [
+          {
+            "icon": "1",
+            "title": "Contract Lane",
+            "detail": "Stabilize interfaces before deep implementation."
+          },
+          {
+            "icon": "2",
+            "title": "Runtime Lane",
+            "detail": "Implement speech flow and orchestration logic."
+          },
+          {
+            "icon": "3",
+            "title": "Validation Lane",
+            "detail": "Replay scenarios before production rollout."
+          }
+        ]
+      }
+    },
+    {
+      "type": "body",
+      "intent": "workflow",
+      "headline": "Workflow 3: __Model extension cockpit__",
+      "introText": "Route tasks to the **best-fit model**, not one model for all",
+      "bullets": [
+        "Use planning models for architecture decisions",
+        "Use coding models for fast implementation passes",
+        "Keep one mission-control thread for final review"
+      ],
+      "visual": {
+        "mode": "cards",
+        "cards": [
+          {
+            "icon": "1",
+            "title": "Model Router",
+            "detail": "Assign model by task boundary."
+          },
+          {
+            "icon": "2",
+            "title": "Extension Bridge",
+            "detail": "Use specialist tools without splitting context."
+          },
+          {
+            "icon": "3",
+            "title": "Unified Review",
+            "detail": "Approve outputs through one release gate."
+          }
+        ]
+      }
+    },
+    {
+      "type": "body",
+      "intent": "workflow",
+      "headline": "Workflow 4: __Parallel SaaS shipping__",
+      "introText": "Run auth, billing, and frontend tracks **at the same time**",
+      "bullets": [
+        "Track 1 ships auth and data schema changes",
+        "Track 2 ships billing APIs and payment flows",
+        "Track 3 ships UI and end-to-end checks"
+      ],
+      "visual": {
+        "mode": "cards",
+        "cards": [
+          {
+            "icon": "1",
+            "title": "Backend Track",
+            "detail": "Own authentication and schema hardening."
+          },
+          {
+            "icon": "2",
+            "title": "Revenue Track",
+            "detail": "Ship billing logic and reconciliation checks."
+          },
+          {
+            "icon": "3",
+            "title": "Experience Track",
+            "detail": "Deliver UI quality and E2E confidence."
+          }
+        ]
+      }
+    },
+    {
+      "type": "body",
+      "intent": "proof",
+      "headline": "__MCP hardening__ in practice",
+      "introText": "Treat connector sprawl as infrastructure, not setup noise",
+      "bullets": [
+        "Standardize connector bootstrap per repo",
+        "Set explicit env and absolute path conventions",
+        "Monitor reconnect failures with local alerts"
+      ],
+      "visual": {
+        "mode": "kpi",
+        "stats": [
+          {
+            "value": "3",
+            "label": "Core Guardrails"
+          },
+          {
+            "value": "1",
+            "label": "Bootstrap Standard"
+          },
+          {
+            "value": "0",
+            "label": "Blind Reconnect Loops"
+          },
+          {
+            "value": "24/7",
+            "label": "Connector Monitoring"
+          }
+        ]
+      }
+    },
+    {
+      "type": "body",
+      "intent": "transition",
+      "headline": "Week-one __adoption path__",
+      "introText": "Roll out in phases so teams gain confidence quickly",
+      "bullets": [
+        "Phase 1: single-agent tasks plus artifact review",
+        "Phase 2: one MCP connector tied to delivery",
+        "Phase 3: role-based multi-agent orchestration"
+      ],
+      "visual": {
+        "mode": "chart",
+        "chart": {
+          "type": "line",
+          "title": "Execution Maturity by Phase",
+          "series": [
+            {
+              "label": "Phase 1",
+              "value": 20
+            },
+            {
+              "label": "Phase 2",
+              "value": 45
+            },
+            {
+              "label": "Phase 3",
+              "value": 70
+            },
+            {
+              "label": "Phase 4",
+              "value": 88
+            }
+          ],
+          "footnote": "Illustrative maturity index for rollout sequencing."
+        }
+      }
+    },
+    {
+      "type": "cta",
+      "headline": "Ready for __Anti-Gravity__ ops?",
+      "ctaText": "Comment AG and I will share the rollout blueprint",
+      "handle": "@maazsiddiqui"
+    }
+  ],
+  "caption": "Anti-Gravity becomes valuable when you treat it as an execution system, not just a coding assistant.\n\nThis deck shows high-leverage workflows teams can run now:\n- Data-aware engineering loops\n- Voice agent factory lanes\n- Multi-model extension cockpit\n- Parallel SaaS shipping\n- MCP reliability hardening\n- Week-one adoption path\n\nIf you want the rollout blueprint, comment AG.\n\n@maazsiddiqui",
+  "metadata": {
+    "version": "2.2.0",
+    "generatedBy": "codex_overseer_pipeline",
+    "sources": [
+      "https://developers.google.com/gemini-code-assist/docs/use-agentic-chat-pair-programmer",
+      "https://docs.anthropic.com/en/docs/claude-code/settings",
+      "https://modelcontextprotocol.io/introduction",
+      "https://github.com/eclipse/openvsx",
+      "https://www.reddit.com/r/ClaudeAI/comments/1lqn9ie"
+    ],
+    "templateVersion": "2.2.0"
+  }
+}

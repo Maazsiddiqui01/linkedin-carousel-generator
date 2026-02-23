@@ -1,0 +1,480 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Carousel Content Spec",
+  "description": "Schema for LinkedIn carousel content specifications",
+  "type": "object",
+  "required": [
+    "slug",
+    "title",
+    "slides",
+    "caption"
+  ],
+  "properties": {
+    "slug": {
+      "type": "string",
+      "pattern": "^[0-9]{8}_[a-z0-9_]+$",
+      "description": "Unique identifier in format YYYYMMDD_topic_slug"
+    },
+    "title": {
+      "type": "string",
+      "maxLength": 100,
+      "description": "Carousel title for reference"
+    },
+    "audience": {
+      "type": "string",
+      "default": "LinkedIn general professional audience",
+      "description": "Target audience description"
+    },
+    "objective": {
+      "type": "string",
+      "enum": [
+        "authority",
+        "education",
+        "lead_generation",
+        "storytelling",
+        "product_marketing",
+        "community_engagement"
+      ],
+      "description": "Primary conversion objective for this deck"
+    },
+    "narrativeMode": {
+      "type": "string",
+      "enum": [
+        "insight",
+        "workflow",
+        "framework",
+        "story",
+        "teardown"
+      ],
+      "description": "Narrative mode used for planning and copy tone"
+    },
+    "planner": {
+      "type": "object",
+      "properties": {
+        "visualCoverageTarget": {
+          "type": "number",
+          "minimum": 0.3,
+          "maximum": 0.9,
+          "description": "Minimum body-slide ratio that must have a visual panel"
+        },
+        "densityProfile": {
+          "type": "string",
+          "enum": [
+            "compact",
+            "balanced",
+            "airy"
+          ],
+          "description": "Default content density profile for body slides"
+        },
+        "researchFreshnessDays": {
+          "type": "integer",
+          "minimum": 7,
+          "maximum": 365,
+          "description": "Target recency window for fast-moving claims"
+        },
+        "runOverseerChecks": {
+          "type": "boolean",
+          "description": "Whether build pipeline should enforce overseer pass before delivery"
+        }
+      }
+    },
+    "experiments": {
+      "type": "object",
+      "properties": {
+        "hookVariant": {
+          "type": "string",
+          "maxLength": 80
+        },
+        "ctaVariant": {
+          "type": "string",
+          "maxLength": 80
+        },
+        "notes": {
+          "type": "string",
+          "maxLength": 240
+        }
+      }
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601 creation timestamp"
+    },
+    "profile": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "maxLength": 60
+        },
+        "avatar": {
+          "type": "string",
+          "maxLength": 240
+        }
+      }
+    },
+    "showRepostBadge": {
+      "type": "boolean"
+    },
+    "enforceHeadlineAccent": {
+      "type": "boolean"
+    },
+    "colorOverride": {
+      "type": "object",
+      "properties": {
+        "primary": {
+          "type": "string",
+          "maxLength": 40
+        },
+        "gradient": {
+          "type": "string",
+          "maxLength": 40
+        },
+        "lightAccent": {
+          "type": "string",
+          "maxLength": 40
+        },
+        "secondary": {
+          "type": "string",
+          "maxLength": 40
+        }
+      }
+    },
+    "slides": {
+      "type": "array",
+      "minItems": 5,
+      "maxItems": 15,
+      "items": {
+        "$ref": "#/definitions/slide"
+      }
+    },
+    "caption": {
+      "type": "string",
+      "maxLength": 3000,
+      "description": "LinkedIn post caption accompanying the carousel"
+    },
+    "cta": {
+      "type": "object",
+      "properties": {
+        "text": {
+          "type": "string"
+        },
+        "link": {
+          "type": "string",
+          "format": "uri"
+        }
+      }
+    },
+    "metadata": {
+      "type": "object",
+      "properties": {
+        "version": {
+          "type": "string"
+        },
+        "generatedBy": {
+          "type": "string"
+        },
+        "templateVersion": {
+          "type": "string"
+        },
+        "sources": {
+          "type": "array",
+          "maxItems": 20,
+          "items": {
+            "type": "string",
+            "format": "uri"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "chip": {
+      "type": "object",
+      "properties": {
+        "mode": {
+          "type": "string",
+          "enum": [
+            "auto",
+            "hide",
+            "workflow",
+            "label"
+          ]
+        },
+        "label": {
+          "type": "string",
+          "maxLength": 24
+        },
+        "workflowNumber": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "style": {
+          "type": "string",
+          "enum": [
+            "info",
+            "success",
+            "proof",
+            "neutral"
+          ]
+        }
+      }
+    },
+    "visualStat": {
+      "type": "object",
+      "required": [
+        "value",
+        "label"
+      ],
+      "properties": {
+        "value": {
+          "type": "string",
+          "maxLength": 24
+        },
+        "label": {
+          "type": "string",
+          "maxLength": 48
+        }
+      }
+    },
+    "visualCard": {
+      "type": "object",
+      "required": [
+        "title"
+      ],
+      "properties": {
+        "icon": {
+          "type": "string",
+          "maxLength": 4
+        },
+        "title": {
+          "type": "string",
+          "maxLength": 36
+        },
+        "detail": {
+          "type": "string",
+          "maxLength": 96
+        }
+      }
+    },
+    "chartSeriesItem": {
+      "type": "object",
+      "required": [
+        "label",
+        "value"
+      ],
+      "properties": {
+        "label": {
+          "type": "string",
+          "maxLength": 28
+        },
+        "value": {
+          "type": "number"
+        }
+      }
+    },
+    "visualChart": {
+      "type": "object",
+      "required": [
+        "type",
+        "title",
+        "series"
+      ],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "bar",
+            "line",
+            "doughnut"
+          ]
+        },
+        "title": {
+          "type": "string",
+          "maxLength": 48
+        },
+        "series": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 8,
+          "items": {
+            "$ref": "#/definitions/chartSeriesItem"
+          }
+        },
+        "footnote": {
+          "type": "string",
+          "maxLength": 100
+        }
+      }
+    },
+    "visual": {
+      "type": "object",
+      "properties": {
+        "mode": {
+          "type": "string",
+          "enum": [
+            "auto",
+            "none",
+            "kpi",
+            "cards",
+            "chart",
+            "image"
+          ]
+        },
+        "stats": {
+          "type": "array",
+          "maxItems": 4,
+          "items": {
+            "$ref": "#/definitions/visualStat"
+          }
+        },
+        "cards": {
+          "type": "array",
+          "maxItems": 4,
+          "items": {
+            "$ref": "#/definitions/visualCard"
+          }
+        },
+        "chart": {
+          "$ref": "#/definitions/visualChart"
+        },
+        "imagePath": {
+          "type": "string",
+          "maxLength": 260
+        }
+      }
+    },
+    "slide": {
+      "type": "object",
+      "required": [
+        "type",
+        "headline"
+      ],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "cover",
+            "framing",
+            "body",
+            "cta"
+          ],
+          "description": "Slide type determining layout"
+        },
+        "intent": {
+          "type": "string",
+          "enum": [
+            "workflow",
+            "result",
+            "milestone",
+            "proof",
+            "context",
+            "framework",
+            "transition",
+            "story",
+            "custom"
+          ]
+        },
+        "chip": {
+          "$ref": "#/definitions/chip"
+        },
+        "visual": {
+          "$ref": "#/definitions/visual"
+        },
+        "headline": {
+          "type": "string",
+          "maxLength": 80,
+          "description": "Main headline text"
+        },
+        "subtitle": {
+          "type": "string",
+          "maxLength": 120,
+          "description": "Optional subtitle (mainly for cover)"
+        },
+        "accentText": {
+          "type": "string",
+          "maxLength": 180
+        },
+        "introText": {
+          "type": "string",
+          "maxLength": 220
+        },
+        "bullets": {
+          "type": "array",
+          "maxItems": 4,
+          "items": {
+            "type": "string",
+            "maxLength": 100
+          },
+          "description": "Bullet points for body or framing slides"
+        },
+        "diagram": {
+          "type": "array",
+          "maxItems": 6,
+          "items": {
+            "type": "string",
+            "maxLength": 30
+          }
+        },
+        "mockupContent": {
+          "type": "string"
+        },
+        "annotation": {
+          "type": "string",
+          "maxLength": 120
+        },
+        "ctaText": {
+          "type": "string",
+          "maxLength": 90,
+          "description": "Call-to-action text for CTA slide"
+        },
+        "handle": {
+          "type": "string",
+          "maxLength": 80,
+          "description": "Social handle for CTA slide"
+        },
+        "stepNumber": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "Legacy workflow step number"
+        },
+        "accentColor": {
+          "type": "string",
+          "description": "Override accent color for this slide"
+        },
+        "coverLogo": {
+          "type": "string",
+          "maxLength": 260
+        },
+        "coverImage": {
+          "type": "string",
+          "maxLength": 260
+        },
+        "densityProfile": {
+          "type": "string",
+          "enum": [
+            "compact",
+            "balanced",
+            "airy"
+          ]
+        },
+        "visualImage": {
+          "type": "string",
+          "maxLength": 260
+        },
+        "sourceRefs": {
+          "type": "array",
+          "maxItems": 6,
+          "items": {
+            "type": "string",
+            "format": "uri"
+          },
+          "description": "Slide-level references for factual claims"
+        },
+        "showVisual": {
+          "type": "boolean"
+        }
+      }
+    }
+  }
+}

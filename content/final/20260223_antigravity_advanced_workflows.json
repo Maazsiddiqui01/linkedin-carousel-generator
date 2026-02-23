@@ -1,0 +1,123 @@
+{
+  "slug": "20260223_antigravity_advanced_workflows",
+  "title": "Anti-Gravity Advanced Workflow Possibilities",
+  "audience": "LinkedIn builders, AI engineers, and technical founders",
+  "createdAt": "2026-02-23T15:10:00Z",
+  "profile": {
+    "name": "Maaz Siddiqui",
+    "avatar": "avatar.png"
+  },
+  "showRepostBadge": true,
+  "colorOverride": {
+    "primary": "#0A6C8F",
+    "gradient": "#0B5E78",
+    "lightAccent": "#E6F7FB",
+    "secondary": "#1A1A2E"
+  },
+  "slides": [
+    {
+      "type": "cover",
+      "headline": "Anti-Gravity in 2026: Beyond Basic Usage",
+      "subtitle": "Advanced workflows teams can actually run",
+      "accentText": "MCP connectors | Multi-agent execution | Extension stack"
+    },
+    {
+      "type": "framing",
+      "headline": "What changed recently?",
+      "accentText": "From assistant UX to agent-first execution",
+      "bullets": [
+        "Agents run across editor, terminal, browser",
+        "Artifacts verify work with plans and recordings",
+        "MCP Store adds connectors inside the IDE"
+      ],
+      "diagram": [
+        "Plan",
+        "Execute",
+        "Verify",
+        "Scale"
+      ]
+    },
+    {
+      "type": "body",
+      "headline": "The feature stack that matters",
+      "introText": "Leverage comes from **MCP + Artifacts + multi-agent flow**",
+      "bullets": [
+        "MCP servers connect live systems in-IDE",
+        "Artifacts create auditable action trails",
+        "Manager flow coordinates specialist agents"
+      ]
+    },
+    {
+      "type": "body",
+      "headline": "Workflow 1: Data-aware engineering loop",
+      "introText": "Connect **AlloyDB, BigQuery, and Looker** via MCP for grounded builds",
+      "bullets": [
+        "Inspect schemas before writing features",
+        "Generate, run, and optimize SQL in one flow",
+        "Validate metrics against Looker semantics"
+      ]
+    },
+    {
+      "type": "body",
+      "headline": "Workflow 2: Autonomous analytics copilot",
+      "introText": "Turn one question into a **forecast + driver brief**",
+      "bullets": [
+        "Agent discovers datasets through connectors",
+        "Runs forecast and contribution analysis",
+        "Builds decision summary with source traces"
+      ]
+    },
+    {
+      "type": "body",
+      "headline": "Workflow 3: End-to-end voice agent factory",
+      "introText": "Use Anti-Gravity as control plane for **voice delivery**",
+      "bullets": [
+        "Agent 1 scaffolds telephony and webhooks",
+        "Agent 2 adds STT, orchestration, tool calls",
+        "Agent 3 validates browser and API behavior"
+      ]
+    },
+    {
+      "type": "body",
+      "headline": "Workflow 4: Multi-model extension cockpit",
+      "introText": "Combine AG orchestration with **Codex or Claude Code extensions** where useful",
+      "bullets": [
+        "Community reports Open VSX extension installs",
+        "Use model specialization by task",
+        "Keep AG as mission control and review hub"
+      ]
+    },
+    {
+      "type": "body",
+      "headline": "Workflow 5: MCP reliability hardening",
+      "introText": "Treat MCP as infrastructure when connector count grows",
+      "bullets": [
+        "Use gateway patterns to reduce reconnect churn",
+        "Enforce explicit env vars and path configs",
+        "Monitor tool failures and reconnect loops"
+      ]
+    },
+    {
+      "type": "body",
+      "headline": "How to reduce intimidation in week one",
+      "introText": "Adopt in phases so teams move with confidence",
+      "bullets": [
+        "Phase 1: single-agent tasks plus reviews",
+        "Phase 2: add one MCP connector to delivery",
+        "Phase 3: split agents by role and domain"
+      ]
+    },
+    {
+      "type": "cta",
+      "headline": "Ready to operationalize Anti-Gravity?",
+      "ctaText": "Comment AG for the workflow map",
+      "handle": "@maazsiddiqui"
+    }
+  ],
+  "caption": "Most people talk about Anti-Gravity like it is just another AI coding assistant.\n\nThat is the basic layer.\n\nThe bigger play is using it as an execution system where agents can plan, build, verify, and connect to real systems through MCP.\n\nIn this carousel, I broke down advanced workflow possibilities I am seeing teams explore:\n- Data-aware engineering loops\n- Autonomous analytics copilots\n- End-to-end voice agent factories\n- Multi-model extension cockpit setups\n- MCP reliability hardening\n\nIf you are overwhelmed, start simple and adopt in phases.\n\nComment AG if you want the exact rollout template.",
+  "metadata": {
+    "version": "1.0.0",
+    "generatedBy": "codex_research_build",
+    "templateVersion": "2.0.0"
+  }
+}

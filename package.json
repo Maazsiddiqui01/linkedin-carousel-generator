@@ -1,0 +1,30 @@
+{
+    "name": "linkedin-carousel-generator",
+    "version": "1.0.0",
+    "description": "Generate consistent, high-quality LinkedIn carousel PDFs",
+    "author": "Maaz Siddiqui",
+    "license": "MIT",
+    "type": "module",
+    "scripts": {
+        "render": "node scripts/render_html_to_pdf.js",
+        "validate": "node scripts/validate_pdf.js",
+        "overseer": "node scripts/run_overseer_checks.js",
+        "build-carousel": "node scripts/build_carousel.js",
+        "init-performance-log": "node scripts/init_performance_log.js",
+        "generate-images": "node scripts/generate_imagen_assets.js",
+        "generate-charts": "node scripts/generate_chart_assets.js",
+        "test-render": "node scripts/render_html_to_pdf.js content/tests/sample_short.json",
+        "install-browsers": "npx playwright install chromium"
+    },
+    "dependencies": {
+        "ajv": "^8.12.0",
+        "ajv-formats": "^2.1.1",
+        "chart.js": "^4.5.1",
+        "handlebars": "^4.7.8",
+        "pdf-lib": "^1.17.1",
+        "playwright": "^1.41.0"
+    },
+    "engines": {
+        "node": ">=18.0.0"
+    }
+}

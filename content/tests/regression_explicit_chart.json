@@ -1,0 +1,94 @@
+{
+  "slug": "20260223_regression_explicit_chart",
+  "title": "Regression - Explicit Chart Mode",
+  "audience": "QA",
+  "createdAt": "2026-02-23T16:24:00Z",
+  "profile": {
+    "name": "Tester",
+    "avatar": "avatar.png"
+  },
+  "showRepostBadge": false,
+  "colorOverride": {
+    "primary": "#0A6C8F",
+    "gradient": "#0B5E78",
+    "lightAccent": "#E6F7FB"
+  },
+  "slides": [
+    {
+      "type": "cover",
+      "headline": "Explicit Chart Regression",
+      "subtitle": "Chart mode should render from declared series"
+    },
+    {
+      "type": "framing",
+      "headline": "Data Story",
+      "accentText": "Explicit data -> deterministic chart",
+      "bullets": [
+        "Use only declared numeric series",
+        "No inferred trend points",
+        "Render chart image before PDF"
+      ],
+      "diagram": [
+        "Data",
+        "Chart",
+        "Panel",
+        "Review"
+      ]
+    },
+    {
+      "type": "body",
+      "intent": "proof",
+      "headline": "Weekly Throughput Trend",
+      "introText": "A line chart should render in the side panel",
+      "bullets": [
+        "Series is explicitly declared in JSON",
+        "Chart asset generated before render",
+        "Panel should show chart only"
+      ],
+      "visual": {
+        "mode": "chart",
+        "chart": {
+          "type": "line",
+          "title": "Resolved Tickets by Week",
+          "series": [
+            {
+              "label": "W1",
+              "value": 12
+            },
+            {
+              "label": "W2",
+              "value": 18
+            },
+            {
+              "label": "W3",
+              "value": 24
+            },
+            {
+              "label": "W4",
+              "value": 30
+            }
+          ],
+          "footnote": "Example QA dataset for regression testing."
+        }
+      }
+    },
+    {
+      "type": "body",
+      "intent": "result",
+      "headline": "Chart Integration Check",
+      "introText": "Renderer should consume generated chart asset",
+      "bullets": [
+        "Chart mode selected in visual decision",
+        "No fallback cards should appear",
+        "Validation should pass"
+      ]
+    },
+    {
+      "type": "cta",
+      "headline": "Chart mode validated",
+      "ctaText": "Proceed to broader regression run",
+      "handle": "@tester"
+    }
+  ],
+  "caption": "Regression fixture for explicit chart rendering."
+}

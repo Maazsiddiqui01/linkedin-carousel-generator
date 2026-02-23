@@ -1,0 +1,1236 @@
+/* ==========================================================================
+   LinkedIn Carousel Slide Styles - Premium Design v2.0
+   Square format with stylized typography
+   ========================================================================== */
+
+/* CSS Custom Properties from Brand Rules */
+:root {
+    /* Slide Dimensions - 1:1 Square */
+    --slide-width: 1080px;
+    --slide-height: 1080px;
+
+    /* Colors - Primary */
+    --color-bg-primary: #FFFFFF;
+    --color-text-primary: #1A1A2E;
+    --color-border: #E5E7EB;
+
+    /* Colors - Accent Palette */
+    --color-accent-blue: #4F6BFF;
+    --color-accent-light-blue: #E8ECFF;
+    --color-accent-teal: #14B8A6;
+    --color-accent-light-teal: #CCFBF1;
+    --color-accent-purple: #8B5CF6;
+    --color-accent-light-purple: #EDE9FE;
+    --color-accent-coral: #FF6B6B;
+    --color-accent-green: #22C55E;
+
+    /* Colors - Neutral */
+    --color-neutral-light: #F8FAFC;
+    --color-neutral-gray: #6B7280;
+    --color-neutral-dark-gray: #374151;
+    --color-neutral-dark: #1F2937;
+
+    /* Theme Colors - Per Slide Type */
+    --theme-cover-primary: #4F6BFF;
+    --theme-cover-gradient: #3B54D4;
+    --theme-framing-primary: #14B8A6;
+    --theme-framing-gradient: #0D9488;
+    --theme-cta-primary: #8B5CF6;
+    --theme-cta-gradient: #7C3AED;
+
+    /* Typography - Dual Font System */
+    --font-family: 'Manrope', 'Segoe UI', sans-serif;
+    --font-family-heading: 'DM Serif Display', Georgia, serif;
+
+    /* Font Sizes - INCREASED for less whitespace */
+    --font-size-h1: 68px;
+    --font-size-h2: 54px;
+    --font-size-h3: 38px;
+    --font-size-body: 34px;
+    --font-size-bullet: 31px;
+    --font-size-caption: 22px;
+    --font-size-badge: 20px;
+
+    /* Font Weights */
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+    --font-weight-extrabold: 800;
+
+    /* Spacing */
+    --spacing-unit: 8px;
+    --spacing-xs: 8px;
+    --spacing-sm: 16px;
+    --spacing-md: 24px;
+    --spacing-lg: 32px;
+    --spacing-xl: 48px;
+    --spacing-xxl: 64px;
+
+    /* Safe Margins - REDUCED for more content space */
+    --safe-margin-top: 40px;
+    --safe-margin-right: 50px;
+    --safe-margin-bottom: 40px;
+    --safe-margin-left: 50px;
+}
+
+/* Reset */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-family);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* ==========================================================================
+   Slide Base - Light Theme
+   ========================================================================== */
+
+.slide {
+    width: var(--slide-width);
+    height: var(--slide-height);
+    background-color: var(--color-bg-primary);
+    color: var(--color-text-primary);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Blue border frame around slide */
+.slide::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    border: 3px solid var(--color-accent-blue);
+    border-radius: 24px;
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Blue bottom bar */
+.slide::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 20px;
+    background-color: var(--color-accent-blue);
+    z-index: 2;
+}
+
+/* ==========================================================================
+   Profile Badge - Top or Bottom
+   ========================================================================== */
+
+.profile-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: var(--color-neutral-dark);
+    color: #FFFFFF;
+    padding: 10px 20px 10px 10px;
+    border-radius: 32px;
+    font-size: var(--font-size-caption);
+    font-weight: var(--font-weight-semibold);
+}
+
+.profile-badge--top {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+.profile-badge--bottom {
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+.profile-badge__avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* ==========================================================================
+   Repost Badge
+   ========================================================================== */
+
+.repost-badge {
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--color-bg-primary);
+    color: var(--color-text-primary);
+    padding: 10px 16px;
+    border-radius: 8px;
+    border: 1px solid var(--color-border);
+    font-size: 14px;
+    font-weight: var(--font-weight-medium);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    z-index: 10;
+}
+
+.repost-badge__icon {
+    font-size: 16px;
+}
+
+/* ==========================================================================
+   Content Container - VERTICALLY CENTERED
+   ========================================================================== */
+
+.slide__content {
+    width: calc(100% - var(--safe-margin-left) - var(--safe-margin-right));
+    height: calc(100% - 120px);
+    /* Account for bottom bar and spacing */
+    margin: 0 auto;
+    padding-top: var(--safe-margin-top);
+    padding-bottom: var(--safe-margin-bottom);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* VERTICAL CENTERING */
+    align-items: center;
+    /* HORIZONTAL CENTERING */
+    text-align: center;
+    position: relative;
+    z-index: 5;
+}
+
+/* ==========================================================================
+   Top Chip (Context-Aware Body Badge)
+   ========================================================================== */
+
+.top-chip {
+    display: inline-block;
+    color: #FFFFFF;
+    font-size: 20px;
+    font-weight: var(--font-weight-bold);
+    padding: 10px 24px;
+    border-radius: 12px;
+    border: 1px solid transparent;
+    margin-bottom: 14px;
+    align-self: center;
+    box-shadow: 0 10px 20px rgba(15, 23, 42, 0.18);
+    line-height: 1;
+}
+
+.top-chip__icon {
+    margin-right: 8px;
+    font-size: 18px;
+}
+
+.top-chip--info {
+    background: linear-gradient(160deg, #1F7AA5, #0D8EB4);
+    border-color: rgba(255, 255, 255, 0.28);
+}
+
+.top-chip--success {
+    background: linear-gradient(160deg, #0E9F6E, #22C55E);
+    border-color: rgba(255, 255, 255, 0.28);
+}
+
+.top-chip--proof {
+    background: linear-gradient(160deg, #4F6BFF, #2F56EF);
+    border-color: rgba(255, 255, 255, 0.28);
+}
+
+.top-chip--neutral {
+    background: linear-gradient(160deg, #5B6473, #3E4653);
+    border-color: rgba(255, 255, 255, 0.24);
+}
+
+/* ==========================================================================
+   Headlines - Stylized Serif Font
+   ========================================================================== */
+
+.slide__headline {
+    font-family: var(--font-family-heading);
+    font-size: var(--font-size-h2);
+    font-weight: var(--font-weight-bold);
+    line-height: 1.2;
+    color: var(--color-text-primary);
+    text-align: center;
+    margin-bottom: var(--spacing-sm);
+    font-style: italic;
+    max-width: 920px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.slide__headline--cover {
+    font-size: var(--font-size-h1);
+    font-style: normal;
+    font-weight: var(--font-weight-extrabold);
+}
+
+.slide__headline--large {
+    font-size: 48px;
+}
+
+/* Highlighted text within headlines */
+.highlight-blue {
+    color: var(--color-accent-blue);
+    font-style: italic;
+    font-weight: var(--font-weight-bold);
+}
+
+.highlight-coral {
+    color: var(--color-accent-coral);
+}
+
+/* Blue background highlight for key words */
+.highlight-box {
+    background: var(--color-accent-blue);
+    color: #FFFFFF;
+    padding: 4px 16px;
+    border-radius: 4px;
+    display: inline-block;
+    font-style: normal;
+}
+
+/* Underline accent */
+.underline-accent {
+    text-decoration: underline;
+    text-decoration-color: var(--color-accent-blue);
+    text-decoration-thickness: 3px;
+    text-underline-offset: 6px;
+}
+
+/* Wavy underline */
+.underline-wavy {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 4'%3E%3Cpath fill='none' stroke='%234F6BFF' stroke-width='1.5' d='M0 3c5 0 5-2 10-2s5 2 10 2'/%3E%3C/svg%3E");
+    background-position: bottom;
+    background-repeat: repeat-x;
+    background-size: 20px 4px;
+    padding-bottom: 6px;
+}
+
+/* ==========================================================================
+   Subtitle
+   ========================================================================== */
+
+.slide__subtitle {
+    font-size: var(--font-size-h3);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-neutral-dark-gray);
+    text-align: center;
+    margin-top: var(--spacing-xs);
+}
+
+.slide__subtitle--accent {
+    color: var(--color-accent-coral);
+    font-weight: var(--font-weight-bold);
+}
+
+/* ==========================================================================
+   Divider Line
+   ========================================================================== */
+
+.divider {
+    width: 100%;
+    height: 3px;
+    background: var(--color-accent-coral);
+    margin: var(--spacing-md) 0;
+}
+
+.divider--blue {
+    background: var(--color-accent-blue);
+}
+
+.divider--short {
+    width: 120px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ==========================================================================
+   Intro Text
+   ========================================================================== */
+
+.slide__intro {
+    font-size: var(--font-size-body);
+    font-weight: var(--font-weight-regular);
+    color: var(--color-text-primary);
+    line-height: 1.4;
+    margin-bottom: 20px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.slide__intro strong {
+    font-weight: var(--font-weight-bold);
+}
+
+/* ==========================================================================
+   Bullets with Blue Checkmarks - Centered Layout
+   ========================================================================== */
+
+.slide__bullets {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 8px;
+    width: 100%;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
+.slide__bullet {
+    font-size: var(--font-size-bullet);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.35;
+    padding-left: 44px;
+    position: relative;
+    color: var(--color-text-primary);
+    text-align: left;
+}
+
+/* Blue checkmark before each bullet */
+.slide__bullet::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    top: 2px;
+    width: 28px;
+    height: 28px;
+    background: var(--color-accent-blue);
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: var(--font-weight-bold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.slide__bullet strong {
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text-primary);
+}
+
+.slide__bullet--icon {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding-left: 0;
+}
+
+.slide__bullet--icon::before {
+    content: '';
+    display: none;
+}
+
+.slide__bullet-icon {
+    width: 30px;
+    min-width: 30px;
+    height: 30px;
+    margin-top: 5px;
+    border-radius: 50%;
+    background: var(--color-accent-light-blue);
+    color: var(--color-accent-blue);
+    font-size: 17px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: inset 0 0 0 1px rgba(79, 107, 255, 0.15);
+}
+
+.slide__bullet-text {
+    flex: 1;
+    line-height: 1.33;
+}
+
+.slide-icon-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 14px;
+    padding: 10px 20px;
+    border-radius: 999px;
+    font-size: 18px;
+    font-weight: var(--font-weight-semibold);
+    letter-spacing: 0.01em;
+}
+
+.slide-icon-chip__emoji {
+    font-size: 22px;
+    line-height: 1;
+}
+
+.slide-icon-chip--cover {
+    background: rgba(255, 255, 255, 0.22);
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    color: #FFFFFF;
+}
+
+.slide-icon-chip--framing {
+    background: #E8FFFB;
+    border: 1px solid #8EE8DD;
+    color: #0E6D64;
+}
+
+.slide-icon-chip--body {
+    background: #EEF2FF;
+    border: 1px solid #CBD5FF;
+    color: #3243C7;
+}
+
+.slide-icon-chip--cta {
+    background: #FCEEFF;
+    border: 1px solid #E6C8FF;
+    color: #7330BC;
+}
+
+.framing-layout {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    align-items: center;
+    gap: var(--spacing-lg);
+}
+
+.slide__bullets--compact .slide__bullet {
+    font-size: 29px;
+}
+
+.body-layout {
+    width: 100%;
+    max-width: 920px;
+    margin: 0 auto;
+    display: block;
+}
+
+.body-layout--with-panel {
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
+    gap: 20px;
+    align-items: start;
+    max-width: 980px;
+}
+
+.body-layout .slide__bullets {
+    margin-top: 0;
+}
+
+.body-layout--with-panel .slide__bullets {
+    max-width: none;
+}
+
+.infographic-panel {
+    background: linear-gradient(165deg, rgba(79, 107, 255, 0.12), rgba(20, 184, 166, 0.08));
+    border: 1px solid rgba(79, 107, 255, 0.2);
+    border-radius: 24px;
+    padding: 14px;
+    box-shadow: 0 14px 34px rgba(79, 107, 255, 0.12);
+    text-align: left;
+    min-height: 236px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.infographic-panel--kpi {
+    justify-content: flex-start;
+}
+
+.infographic-panel--cards {
+    justify-content: flex-start;
+}
+
+.infographic-panel--image,
+.infographic-panel--chart {
+    padding: 10px;
+}
+
+.infographic-image {
+    margin: 0;
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid rgba(79, 107, 255, 0.16);
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.14);
+}
+
+.infographic-image__img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    display: block;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    margin-bottom: 0;
+}
+
+.stat-card {
+    background: #FFFFFF;
+    border-radius: 14px;
+    padding: 14px 12px;
+    border: 1px solid rgba(79, 107, 255, 0.12);
+}
+
+.stat-card__value {
+    font-size: 34px;
+    font-weight: var(--font-weight-extrabold);
+    color: var(--color-accent-blue);
+    line-height: 1.05;
+}
+
+.stat-card__label {
+    margin-top: 6px;
+    font-size: 14px;
+    color: var(--color-neutral-dark-gray);
+    font-weight: var(--font-weight-semibold);
+}
+
+.insight-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.infographic-chart {
+    margin: 0;
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid rgba(79, 107, 255, 0.16);
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.14);
+    background: #FFFFFF;
+}
+
+.infographic-chart__img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    display: block;
+}
+
+.infographic-chart__footnote {
+    margin: 8px 10px 10px 10px;
+    font-size: 12px;
+    color: var(--color-neutral-dark-gray);
+    line-height: 1.35;
+}
+
+.insight-card {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(79, 107, 255, 0.14);
+    border-radius: 14px;
+    padding: 10px 12px;
+}
+
+.insight-card__content {
+    flex: 1;
+}
+
+.insight-card__icon {
+    width: 24px;
+    min-width: 24px;
+    height: 24px;
+    margin-top: 3px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.insight-card__title {
+    font-size: 15px;
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text-primary);
+    line-height: 1.25;
+}
+
+.insight-card__detail {
+    margin-top: 2px;
+    font-size: 12px;
+    line-height: 1.3;
+    color: var(--color-neutral-dark-gray);
+}
+
+/* ==========================================================================
+   Screenshot Mockup Container
+   ========================================================================== */
+
+.mockup-container {
+    margin-top: var(--spacing-lg);
+    position: relative;
+}
+
+.mockup {
+    background: var(--color-neutral-dark);
+    border-radius: 16px;
+    padding: 24px;
+    color: #FFFFFF;
+    font-size: 16px;
+    line-height: 1.6;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+}
+
+.mockup__header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 16px;
+    color: var(--color-neutral-gray);
+}
+
+.mockup__dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--color-neutral-gray);
+}
+
+/* Annotation sticky note */
+.annotation {
+    position: absolute;
+    background: #FEF3C7;
+    color: var(--color-text-primary);
+    padding: 12px 16px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: var(--font-weight-medium);
+    transform: rotate(3deg);
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+    max-width: 160px;
+}
+
+.annotation--right {
+    right: -20px;
+    top: 50%;
+}
+
+/* ==========================================================================
+   Visual Diagram (like Research/Writing/etc around central icon)
+   ========================================================================== */
+
+.visual-diagram {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: center;
+    justify-items: center;
+    gap: 14px;
+    margin-top: var(--spacing-md);
+    position: relative;
+    background: rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(20, 184, 166, 0.25);
+    border-radius: 20px;
+    padding: 18px 12px;
+}
+
+.diagram-center {
+    width: 92px;
+    height: 92px;
+    background: linear-gradient(145deg, #FFFFFF, #ECFEFF);
+    border: 2px solid rgba(20, 184, 166, 0.35);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-column: 1 / -1;
+}
+
+.diagram-center__icon {
+    font-size: 40px;
+    color: var(--color-accent-teal);
+}
+
+.diagram-label {
+    width: 100%;
+    text-align: center;
+    background: var(--color-bg-primary);
+    border: 1px solid rgba(20, 184, 166, 0.25);
+    border-radius: 12px;
+    padding: 12px 8px;
+    font-size: 20px;
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text-primary);
+    box-shadow: 0 8px 16px rgba(20, 184, 166, 0.08);
+}
+
+/* ==========================================================================
+   Cover Slide - Full Color Background
+   ========================================================================== */
+
+.slide--cover {
+    background: linear-gradient(135deg, var(--color-accent-blue) 0%, #3B54D4 100%);
+    color: #FFFFFF;
+}
+
+.slide--cover::after {
+    background-color: rgba(10, 18, 44, 0.75);
+}
+
+/* Override border for cover */
+.slide--cover::before {
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.slide--cover .slide__content::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.16), transparent 55%),
+        radial-gradient(circle at 80% 80%, rgba(12, 18, 45, 0.22), transparent 45%);
+    z-index: 0;
+}
+
+.slide--cover .slide__content {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.slide--cover .slide__headline {
+    color: #FFFFFF;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.slide--cover .slide__subtitle {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.cover-content-card {
+    position: relative;
+    z-index: 2;
+    width: min(920px, 92%);
+    padding: 42px 48px;
+    border-radius: 28px;
+    background: linear-gradient(160deg, rgba(5, 10, 33, 0.55), rgba(5, 10, 33, 0.35));
+    border: 1px solid rgba(255, 255, 255, 0.24);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 24px 70px rgba(7, 14, 44, 0.35);
+}
+
+.cover-content-card .slide__headline {
+    margin-top: var(--spacing-sm);
+}
+
+.cover-content-card .slide__subtitle {
+    color: rgba(255, 255, 255, 0.96);
+}
+
+.slide--cover .profile-badge {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.cover-visual {
+    margin-top: var(--spacing-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-lg);
+}
+
+.cover-icon {
+    width: 120px;
+    height: 120px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(4px);
+}
+
+.cover-arrow {
+    font-size: 40px;
+    color: #FFFFFF;
+}
+
+/* Decorative elements for cover */
+.slide--cover .decorative-circle {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.05);
+    z-index: 0;
+}
+
+.slide--cover .decorative-circle--1 {
+    width: 300px;
+    height: 300px;
+    top: -100px;
+    right: -100px;
+}
+
+.slide--cover .decorative-circle--2 {
+    width: 200px;
+    height: 200px;
+    bottom: 100px;
+    left: -60px;
+}
+
+/* ==========================================================================
+   CTA Slide
+   ========================================================================== */
+
+.slide--cta .slide__content {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.cta-text {
+    font-size: var(--font-size-h3);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-accent-blue);
+    margin-top: var(--spacing-md);
+}
+
+.cta-handle {
+    font-size: var(--font-size-body);
+    color: var(--color-neutral-gray);
+    margin-top: var(--spacing-sm);
+}
+
+/* ==========================================================================
+   Body Slide - Centered content with subtle background
+   ========================================================================== */
+
+.slide--body {
+    background: linear-gradient(180deg, #FFFFFF 0%, var(--color-neutral-light) 100%);
+}
+
+.slide--body .slide__content {
+    justify-content: flex-start;
+    padding-top: 72px;
+}
+
+.slide--body .slide__bullets {
+    text-align: left;
+    align-self: center;
+    max-width: none;
+    margin-top: 0;
+}
+
+.slide--body .slide__intro {
+    text-align: center;
+    align-self: center;
+    max-width: 860px;
+}
+
+.slide--body .slide__headline,
+.slide--framing .slide__headline {
+    font-style: normal;
+}
+
+/* Density tuning to reduce dead whitespace while preserving readability */
+.slide--body.slide--density-compact .slide__content {
+    padding-top: 58px;
+}
+
+.slide--body.slide--density-compact .slide__intro {
+    margin-bottom: 14px;
+}
+
+.slide--body.slide--density-compact .slide__bullets {
+    gap: 8px;
+}
+
+.slide--body.slide--density-compact .infographic-panel {
+    min-height: 212px;
+}
+
+.slide--body.slide--density-airy .slide__content {
+    padding-top: 78px;
+}
+
+.slide--body.slide--density-airy .slide__intro {
+    margin-bottom: 24px;
+}
+
+.slide--body.slide--density-airy .slide__bullets {
+    gap: 14px;
+}
+
+/* ==========================================================================
+   Framing Slide - Teal themed with gradient
+   ========================================================================== */
+
+.slide--framing {
+    background: linear-gradient(180deg, var(--color-accent-light-teal) 0%, #FFFFFF 50%);
+    position: relative;
+    overflow: hidden;
+}
+
+.slide--framing::before {
+    content: '';
+    position: absolute;
+    top: -100px;
+    right: -100px;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: var(--color-accent-teal);
+    opacity: 0.05;
+}
+
+.slide--framing .slide__content {
+    justify-content: flex-start;
+    padding-top: 72px;
+    z-index: 1;
+}
+
+.slide--framing .slide__headline {
+    color: var(--color-accent-teal);
+}
+
+.slide--framing .bullet__icon {
+    background: var(--color-accent-teal);
+}
+
+.slide--framing .slide__bullets {
+    text-align: left;
+    align-self: center;
+}
+
+.slide--framing .slide__divider {
+    background: linear-gradient(90deg, var(--color-accent-teal), transparent);
+}
+
+/* ==========================================================================
+   Utility Classes
+   ========================================================================== */
+
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-blue {
+    color: var(--color-accent-blue);
+}
+
+.text-teal {
+    color: var(--color-accent-teal);
+}
+
+.text-purple {
+    color: var(--color-accent-purple);
+}
+
+.text-coral {
+    color: var(--color-accent-coral);
+}
+
+.text-bold {
+    font-weight: var(--font-weight-bold);
+}
+
+.text-medium {
+    font-weight: var(--font-weight-medium);
+}
+
+.mt-sm {
+    margin-top: var(--spacing-sm);
+}
+
+.mt-md {
+    margin-top: var(--spacing-md);
+}
+
+.mt-lg {
+    margin-top: var(--spacing-lg);
+}
+
+.mt-xl {
+    margin-top: var(--spacing-xl);
+}
+
+.mb-sm {
+    margin-bottom: var(--spacing-sm);
+}
+
+.mb-md {
+    margin-bottom: var(--spacing-md);
+}
+
+.mb-lg {
+    margin-bottom: var(--spacing-lg);
+}
+
+.mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ==========================================================================
+   SVG Decorative Elements
+   ========================================================================== */
+
+/* Curvy accent line - top of body slides */
+.decor-curve {
+    position: absolute;
+    width: 200px;
+    height: 60px;
+    opacity: 0.15;
+    z-index: 0;
+}
+
+.decor-curve--top-right {
+    top: 80px;
+    right: 60px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 60'%3E%3Cpath d='M0 30 Q50 0 100 30 T200 30' fill='none' stroke='%234F6BFF' stroke-width='3'/%3E%3C/svg%3E");
+}
+
+.decor-curve--top-left {
+    top: 80px;
+    left: 60px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 60'%3E%3Cpath d='M0 30 Q50 60 100 30 T200 30' fill='none' stroke='%2314B8A6' stroke-width='3'/%3E%3C/svg%3E");
+}
+
+/* Abstract blob shapes */
+.decor-blob {
+    position: absolute;
+    opacity: 0.06;
+    z-index: 0;
+}
+
+.decor-blob--1 {
+    width: 250px;
+    height: 250px;
+    bottom: 120px;
+    left: -80px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cpath d='M100 20 C140 20 180 60 180 100 C180 140 140 180 100 180 C60 180 20 140 20 100 C20 60 60 20 100 20' fill='%234F6BFF'/%3E%3C/svg%3E");
+}
+
+.decor-blob--2 {
+    width: 180px;
+    height: 180px;
+    top: 60px;
+    right: -50px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cpath d='M100 10 C160 30 190 80 180 140 C170 200 100 190 50 160 C0 130 10 60 60 30 C80 15 100 10 100 10' fill='%2314B8A6'/%3E%3C/svg%3E");
+}
+
+/* Dotted pattern for accents */
+.decor-dots {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    opacity: 0.08;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='10' cy='10' r='3' fill='%234F6BFF'/%3E%3Ccircle cx='30' cy='10' r='3' fill='%234F6BFF'/%3E%3Ccircle cx='50' cy='10' r='3' fill='%234F6BFF'/%3E%3Ccircle cx='10' cy='30' r='3' fill='%234F6BFF'/%3E%3Ccircle cx='30' cy='30' r='3' fill='%234F6BFF'/%3E%3Ccircle cx='50' cy='30' r='3' fill='%234F6BFF'/%3E%3Ccircle cx='10' cy='50' r='3' fill='%234F6BFF'/%3E%3Ccircle cx='30' cy='50' r='3' fill='%234F6BFF'/%3E%3Ccircle cx='50' cy='50' r='3' fill='%234F6BFF'/%3E%3C/svg%3E");
+    z-index: 0;
+}
+
+.decor-dots--bottom-right {
+    bottom: 100px;
+    right: 80px;
+}
+
+/* Abstract lines */
+.decor-lines {
+    position: absolute;
+    width: 120px;
+    height: 80px;
+    opacity: 0.1;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 80'%3E%3Cline x1='0' y1='10' x2='120' y2='10' stroke='%238B5CF6' stroke-width='2'/%3E%3Cline x1='0' y1='30' x2='100' y2='30' stroke='%238B5CF6' stroke-width='2'/%3E%3Cline x1='0' y1='50' x2='80' y2='50' stroke='%238B5CF6' stroke-width='2'/%3E%3Cline x1='0' y1='70' x2='60' y2='70' stroke='%238B5CF6' stroke-width='2'/%3E%3C/svg%3E");
+    z-index: 0;
+}
+
+.decor-lines--top-left {
+    top: 100px;
+    left: 60px;
+}
+
+/* Workflow icon backgrounds */
+.icon-circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    margin-bottom: var(--spacing-sm);
+}
+
+.icon-circle--blue {
+    background: var(--color-accent-light-blue);
+    color: var(--color-accent-blue);
+}
+
+.icon-circle--teal {
+    background: var(--color-accent-light-teal);
+    color: var(--color-accent-teal);
+}
+
+.icon-circle--purple {
+    background: var(--color-accent-light-purple);
+    color: var(--color-accent-purple);
+}
+
+/* ==========================================================================
+   Cover Logo Support
+   ========================================================================== */
+
+.cover-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: var(--spacing-lg);
+}
+
+.cover-logo__img {
+    max-width: 360px;
+    max-height: 200px;
+    object-fit: contain;
+    filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.15));
+}
+
+/* On cover slides with gradient bg, make logo pop */
+.slide--cover .cover-logo__img {
+    filter: drop-shadow(0 4px 16px rgba(0, 0, 0, 0.3));
+}
+
+/* ==========================================================================
+   Cover Image / Meme Support
+   ========================================================================== */
+
+.cover-image {
+    margin-top: var(--spacing-lg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cover-image__img {
+    max-width: 340px;
+    max-height: 340px;
+    border-radius: 16px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
+    object-fit: contain;
+}

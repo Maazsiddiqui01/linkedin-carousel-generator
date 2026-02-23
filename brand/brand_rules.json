@@ -1,0 +1,171 @@
+{
+  "version": "2.0.0",
+  "slide": {
+    "width": 1080,
+    "height": 1080,
+    "aspectRatio": "1:1",
+    "format": "linkedin_carousel"
+  },
+  "defaults": {
+    "slideCount": {
+      "min": 7,
+      "max": 10,
+      "default": 8
+    }
+  },
+  "colors": {
+    "primary": {
+      "background": "#FFFFFF",
+      "text": "#1A1A2E",
+      "border": "#E5E7EB"
+    },
+    "accent": {
+      "blue": "#4F6BFF",
+      "lightBlue": "#E8ECFF",
+      "teal": "#14B8A6",
+      "lightTeal": "#CCFBF1",
+      "purple": "#8B5CF6",
+      "lightPurple": "#EDE9FE",
+      "coral": "#FF6B6B",
+      "green": "#22C55E"
+    },
+    "neutral": {
+      "light": "#F8FAFC",
+      "gray": "#6B7280",
+      "darkGray": "#374151",
+      "dark": "#1F2937"
+    },
+    "themes": {
+      "cover": {
+        "primary": "#4F6BFF",
+        "gradient": "#3B54D4"
+      },
+      "framing": {
+        "primary": "#14B8A6",
+        "gradient": "#0D9488"
+      },
+      "body": {
+        "primary": "#4F6BFF",
+        "accent": "#14B8A6"
+      },
+      "cta": {
+        "primary": "#8B5CF6",
+        "gradient": "#7C3AED"
+      }
+    }
+  },
+  "typography": {
+    "fontFamily": {
+      "primary": "Inter",
+      "heading": "Playfair Display",
+      "fallback": "system-ui, -apple-system, sans-serif"
+    },
+    "scale": {
+      "h1": {
+        "size": 56,
+        "weight": 800,
+        "lineHeight": 1.15
+      },
+      "h2": {
+        "size": 44,
+        "weight": 700,
+        "lineHeight": 1.2
+      },
+      "h3": {
+        "size": 32,
+        "weight": 600,
+        "lineHeight": 1.3
+      },
+      "body": {
+        "size": 26,
+        "weight": 400,
+        "lineHeight": 1.5
+      },
+      "bullet": {
+        "size": 24,
+        "weight": 500,
+        "lineHeight": 1.6
+      },
+      "caption": {
+        "size": 18,
+        "weight": 500,
+        "lineHeight": 1.4
+      },
+      "badge": {
+        "size": 20,
+        "weight": 700,
+        "lineHeight": 1
+      }
+    }
+  },
+  "spacing": {
+    "unit": 8,
+    "scale": {
+      "xs": 8,
+      "sm": 16,
+      "md": 24,
+      "lg": 32,
+      "xl": 48,
+      "xxl": 64
+    },
+    "safeMargin": {
+      "top": 60,
+      "right": 40,
+      "bottom": 60,
+      "left": 40
+    }
+  },
+  "components": {
+    "profileBadge": {
+      "avatar": 40,
+      "padding": 12,
+      "borderRadius": 24
+    },
+    "workflowBadge": {
+      "paddingX": 24,
+      "paddingY": 12,
+      "borderRadius": 8
+    },
+    "bottomBar": {
+      "height": 20
+    },
+    "divider": {
+      "height": 3,
+      "marginY": 24
+    },
+    "checkmark": {
+      "size": 24
+    },
+    "screenshotMockup": {
+      "borderRadius": 16,
+      "shadow": "0 8px 32px rgba(0,0,0,0.12)"
+    }
+  },
+  "logo": {
+    "position": "bottom-center",
+    "avatarSize": 40,
+    "marginBottom": 60,
+    "file": "avatar.png"
+  },
+  "constraints": {
+    "headline": {
+      "maxLength": 50,
+      "preferredLength": 40
+    },
+    "bullet": {
+      "maxLength": 50,
+      "maxPerSlide": 4
+    },
+    "slideTypes": [
+      "cover",
+      "framing",
+      "body",
+      "cta"
+    ]
+  },
+  "export": {
+    "dpi": 144,
+    "quality": 90,
+    "format": "pdf"
+  }
+}

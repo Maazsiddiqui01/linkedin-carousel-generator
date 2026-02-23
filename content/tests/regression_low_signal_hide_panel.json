@@ -1,0 +1,79 @@
+{
+  "slug": "20260223_regression_low_signal_hide_panel",
+  "title": "Regression - Low Signal Panel Hide",
+  "audience": "QA",
+  "createdAt": "2026-02-23T16:22:00Z",
+  "profile": {
+    "name": "Tester",
+    "avatar": "avatar.png"
+  },
+  "showRepostBadge": false,
+  "slides": [
+    {
+      "type": "cover",
+      "headline": "Low Signal Panel Rule",
+      "subtitle": "Hide side panel instead of filler cards"
+    },
+    {
+      "type": "framing",
+      "headline": "Why this matters",
+      "accentText": "No irrelevant side content",
+      "bullets": [
+        "Context should drive visual choices",
+        "Low-signal text should not force cards",
+        "Layout must remain clean and aligned"
+      ],
+      "diagram": [
+        "Signal",
+        "Decision",
+        "Render",
+        "Validate"
+      ]
+    },
+    {
+      "type": "body",
+      "intent": "context",
+      "headline": "Working Principles",
+      "introText": "Use a clear system and avoid unnecessary complexity",
+      "bullets": [
+        "Start from user intent",
+        "Keep language concise",
+        "Preserve visual hierarchy"
+      ],
+      "visual": {
+        "mode": "none"
+      }
+    },
+    {
+      "type": "body",
+      "intent": "result",
+      "headline": "Measured Improvement",
+      "introText": "Quality increases when decisions are explicit",
+      "bullets": [
+        "Fewer revisions per deck",
+        "Higher output consistency",
+        "Cleaner final presentation"
+      ],
+      "visual": {
+        "mode": "kpi",
+        "stats": [
+          {
+            "value": "1",
+            "label": "Explicit Decision System"
+          },
+          {
+            "value": "3",
+            "label": "Core QA Gates"
+          }
+        ]
+      }
+    },
+    {
+      "type": "cta",
+      "headline": "Want the ruleset?",
+      "ctaText": "Comment RULES and I will share it",
+      "handle": "@tester"
+    }
+  ],
+  "caption": "Regression fixture for low-signal panel hiding."
+}

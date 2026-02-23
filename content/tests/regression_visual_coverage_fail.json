@@ -1,0 +1,72 @@
+{
+  "slug": "20260223_regression_visual_coverage_fail",
+  "title": "Regression - Visual Coverage Gate",
+  "audience": "QA",
+  "createdAt": "2026-02-23T18:32:00Z",
+  "slides": [
+    {
+      "type": "cover",
+      "headline": "Visual Coverage Gate",
+      "subtitle": "Should fail when body panels are absent"
+    },
+    {
+      "type": "framing",
+      "headline": "Setup",
+      "accentText": "Body slides intentionally have no side visual",
+      "bullets": [
+        "This is a failure fixture",
+        "Coverage target defaults to 30%",
+        "All body slides stay visual none"
+      ]
+    },
+    {
+      "type": "body",
+      "intent": "workflow",
+      "headline": "Workflow 1",
+      "introText": "No visual panel",
+      "visual": {
+        "mode": "none"
+      },
+      "bullets": [
+        "Step A",
+        "Step B",
+        "Step C"
+      ]
+    },
+    {
+      "type": "body",
+      "intent": "result",
+      "headline": "Result Snapshot",
+      "introText": "Still no panel",
+      "visual": {
+        "mode": "none"
+      },
+      "bullets": [
+        "Outcome A",
+        "Outcome B",
+        "Outcome C"
+      ]
+    },
+    {
+      "type": "body",
+      "intent": "transition",
+      "headline": "Next Move",
+      "introText": "Still no panel",
+      "visual": {
+        "mode": "none"
+      },
+      "bullets": [
+        "Phase A",
+        "Phase B",
+        "Phase C"
+      ]
+    },
+    {
+      "type": "cta",
+      "headline": "Fix and rerun",
+      "ctaText": "Add relevant visuals to pass the gate",
+      "handle": "@qa"
+    }
+  ],
+  "caption": "Regression fixture for visual coverage failure."
+}

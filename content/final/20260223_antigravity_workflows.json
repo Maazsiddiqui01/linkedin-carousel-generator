@@ -1,0 +1,125 @@
+{
+    "slug": "20260223_antigravity_workflows",
+    "title": "AntiGravity: 4 Advanced Workflows Nobody Is Talking About",
+    "audience": "LinkedIn AI professionals, developers, and automation enthusiasts",
+    "createdAt": "2026-02-23T15:06:00Z",
+    "profile": {
+        "name": "Maaz Siddiqui",
+        "avatar": "avatar.png"
+    },
+    "showRepostBadge": true,
+    "colorOverride": {
+        "primary": "#0891B2",
+        "gradient": "#065F73",
+        "lightAccent": "#E0F7FA"
+    },
+    "slides": [
+        {
+            "type": "cover",
+            "headline": "AntiGravity Is **Not** Just an IDE",
+            "subtitle": "4 workflows nobody is talking about"
+        },
+        {
+            "type": "framing",
+            "headline": "What makes it different",
+            "accentText": "It's not about writing code faster",
+            "bullets": [
+                "**Agent Manager**: Spawn parallel agents across workspaces",
+                "**MCP Connectors**: GitHub, Supabase, Notion — live data",
+                "**Full Autonomy**: Browser, terminal, and file system access"
+            ],
+            "diagram": [
+                "Parallel Agents",
+                "MCP Hub",
+                "Browser Control",
+                "Terminal Access"
+            ]
+        },
+        {
+            "type": "body",
+            "stepNumber": 1,
+            "headline": "__MCP__ Changes Everything",
+            "introText": "Connect agents to **live data sources** — no copy-paste, no context switching.",
+            "bullets": [
+                "Pull **live schemas** from MongoDB or Supabase",
+                "Read **GitHub issues** and PRs in real-time",
+                "Query **Notion docs** without leaving the IDE",
+                "Generate **mock servers** from real API specs"
+            ]
+        },
+        {
+            "type": "body",
+            "stepNumber": 2,
+            "headline": "One IDE, __Every AI Model__",
+            "introText": "Switch between Gemini, Claude, and GPT — pick the right brain for each task.",
+            "bullets": [
+                "**Gemini 3 Pro** for deep planning and analysis",
+                "**Claude Sonnet** for nuanced code reviews",
+                "**GPT-OSS** for fast iteration and prototyping",
+                "Run **Codex or Claude Code** via terminal"
+            ]
+        },
+        {
+            "type": "body",
+            "stepNumber": 3,
+            "headline": "Build __Voice Agents__ End-to-End",
+            "introText": "Spawn **3 parallel agents** — each handles a different piece of the pipeline.",
+            "bullets": [
+                "Agent 1: **Vapi/LiveKit** backend integration",
+                "Agent 2: Real-time **audio pipeline** testing",
+                "Agent 3: **Cloud deployment** with artifacts"
+            ]
+        },
+        {
+            "type": "body",
+            "stepNumber": 4,
+            "headline": "Ship a __SaaS App__ in Parallel",
+            "introText": "Multiple agents build auth, billing, and UI — **simultaneously**.",
+            "bullets": [
+                "One agent handles **auth + database schemas**",
+                "One agent builds **billing API + Stripe**",
+                "One agent ships **frontend + E2E tests**"
+            ]
+        },
+        {
+            "type": "body",
+            "stepNumber": 5,
+            "headline": "__DevOps__ on Autopilot",
+            "introText": "Agents audit your repos, generate CI/CD configs, and provision infra — **all at once**.",
+            "bullets": [
+                "**Code audit** agent scans for vulnerabilities",
+                "**Pipeline agent** generates CI/CD YAML",
+                "**Infra agent** provisions cloud resources"
+            ]
+        },
+        {
+            "type": "body",
+            "stepNumber": 6,
+            "headline": "Real-Time __Data Pipelines__",
+            "introText": "MCP + parallel agents = live ingestion, transformation, and dashboards.",
+            "bullets": [
+                "**Ingestion agent** pulls from APIs and DBs",
+                "**Transform agent** cleans and structures data",
+                "**Viz agent** builds dashboards and reports"
+            ]
+        },
+        {
+            "type": "cta",
+            "headline": "Ready to go beyond basic AI?",
+            "ctaText": "Follow for advanced automation workflows",
+            "handle": "@maazsiddiqui"
+        }
+    ],
+    "caption": "AntiGravity is not just another AI code editor.\n\nIt's an agent-first platform where you dispatch parallel agents across workspaces.\n\nHere are 4 workflows nobody is talking about:\n\n1. Voice Agent Pipeline — 3 agents build Vapi integration, audio processing, and deployment simultaneously\n\n2. Full-Stack SaaS — Auth, billing, frontend, and tests built in parallel by separate agents\n\n3. DevOps Mesh — Code audit, CI/CD generation, and infra provisioning on autopilot\n\n4. Data Pipelines — MCP connectors pull live data, agents transform and visualize it\n\nPlus: MCP connectors to GitHub, Supabase, Notion. Multi-model support (Gemini, Claude, GPT). Full browser and terminal autonomy.\n\nThis is not about writing code faster.\nIt's about building systems you couldn't before.\n\nSave this for later.\n\n♻️ Repost to share with your network\n📌 Follow @maazsiddiqui for more AI insights",
+    "metadata": {
+        "version": "1.0.0",
+        "generatedBy": "perplexity-research",
+        "sources": [
+            "https://antigravity.google/blog/introducing-google-antigravity",
+            "https://codelabs.developers.google.com/getting-started-google-antigravity",
+            "https://zeabur.com/blogs/google-antigravity-agentic-ide-features",
+            "https://dev.to/sauravkumar8178/experience-liftoff-google-antigravity-the-agent-first-ide-redefining-development-55oe"
+        ],
+        "templateVersion": "1.1.0"
+    }
+}

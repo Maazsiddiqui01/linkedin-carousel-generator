@@ -1,0 +1,93 @@
+{
+  "slug": "20260223_regression_story_awards",
+  "title": "Regression - Story Awards Context",
+  "audience": "QA",
+  "createdAt": "2026-02-23T16:20:00Z",
+  "profile": {
+    "name": "Tester",
+    "avatar": "avatar.png"
+  },
+  "showRepostBadge": false,
+  "slides": [
+    {
+      "type": "cover",
+      "headline": "Story Regression Deck",
+      "subtitle": "Awards slide should not be workflow labeled"
+    },
+    {
+      "type": "framing",
+      "headline": "Context",
+      "accentText": "Milestone narrative test",
+      "bullets": [
+        "Career progression and measurable impact",
+        "Recognition tied to outcomes",
+        "Transition to next chapter"
+      ],
+      "diagram": [
+        "Role",
+        "Impact",
+        "Recognition",
+        "Next"
+      ]
+    },
+    {
+      "type": "body",
+      "intent": "milestone",
+      "headline": "4 Awards in Under a Year",
+      "introText": "Recognition for impact, not just activity",
+      "bullets": [
+        "3 Silver Performance Awards",
+        "1 Bronze Performance Award",
+        "Adopted process region-wide"
+      ],
+      "visual": {
+        "mode": "kpi",
+        "stats": [
+          {
+            "value": "4",
+            "label": "Awards Earned"
+          },
+          {
+            "value": "3",
+            "label": "Silver Awards"
+          },
+          {
+            "value": "1",
+            "label": "Bronze Award"
+          }
+        ]
+      }
+    },
+    {
+      "type": "body",
+      "intent": "transition",
+      "headline": "What Comes Next",
+      "introText": "Apply lessons to AI automation systems",
+      "bullets": [
+        "Move from manual to automated operations",
+        "Scale repeatable workflow execution",
+        "Keep outcomes as the north star"
+      ],
+      "visual": {
+        "mode": "cards",
+        "cards": [
+          {
+            "title": "Execution Focus",
+            "detail": "Prioritize production workflows over demos."
+          },
+          {
+            "title": "Scale Blueprint",
+            "detail": "Standardize delivery patterns for teams."
+          }
+        ]
+      }
+    },
+    {
+      "type": "cta",
+      "headline": "Ready for the next chapter?",
+      "ctaText": "Comment MAP for the rollout template",
+      "handle": "@tester"
+    }
+  ],
+  "caption": "Regression fixture for milestone/story chip behavior."
+}

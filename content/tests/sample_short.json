@@ -1,0 +1,82 @@
+{
+    "slug": "20260207_claude_cowork_workflows",
+    "title": "5 Claude Co-work Workflows For LinkedIn",
+    "audience": "LinkedIn professionals and content creators",
+    "createdAt": "2026-02-07T19:50:00Z",
+    "profile": {
+        "name": "Maaz Siddiqui",
+        "avatar": "avatar.png"
+    },
+    "showRepostBadge": true,
+    "slides": [
+        {
+            "type": "cover",
+            "headline": "5 Claude Co-work **Workflows** For LinkedIn",
+            "subtitle": "That save ~5+ hours a week",
+            "showVisual": true
+        },
+        {
+            "type": "framing",
+            "headline": "This is Claude Co-work",
+            "accentText": "Not a chatbot",
+            "bullets": [
+                "A workspace.",
+                "You bring context.",
+                "It handles the thinking."
+            ],
+            "diagram": [
+                "Research",
+                "Writing",
+                "Structuring",
+                "Synthesis"
+            ]
+        },
+        {
+            "type": "body",
+            "stepNumber": 1,
+            "headline": "Make your posts __searchable__",
+            "introText": "Paste your full post history into a **Project** once. Reuse it later.",
+            "bullets": [
+                "Every post in **one structured document**",
+                "Grouped by topic and recurring ideas",
+                "Frameworks automatically extracted"
+            ],
+            "mockupContent": "Please create a searchable knowledge base from all my LinkedIn posts...",
+            "annotation": "Paste your full post history once. Reuse it later."
+        },
+        {
+            "type": "body",
+            "stepNumber": 2,
+            "headline": "Turn ~~viral posts~~ into repeatable formats",
+            "bullets": [
+                "Identifies hook, build, and payoff",
+                "Compares structure across posts",
+                "Applies the pattern to your idea"
+            ],
+            "mockupContent": "Please analyze high-performing LinkedIn posts and help me write in that structure..."
+        },
+        {
+            "type": "body",
+            "stepNumber": 3,
+            "headline": "Turn conversations into __content__",
+            "bullets": [
+                "Pulls ideas from real explanations",
+                "Preserves your natural phrasing",
+                "Converts spoken clarity into post"
+            ],
+            "mockupContent": "Please build me a LinkedIn content calendar based on what I'm already saying..."
+        },
+        {
+            "type": "cta",
+            "headline": "Ready to work smarter?",
+            "ctaText": "Follow for more AI automation tips",
+            "handle": "@maazsiddiqui"
+        }
+    ],
+    "caption": "Claude Co-work isn't a chatbot.\n\nIt's a workspace where you bring context—and it handles the thinking.\n\nHere are 5 workflows I use for LinkedIn:\n\n1. Make posts searchable\n2. Turn viral posts into repeatable formats\n3. Turn conversations into content\n4. Research-backed writing\n5. Content calendar automation\n\nSave this and try workflow #1 today.\n\n♻️ Repost to help others\n📌 Follow @maazsiddiqui for daily AI tips",
+    "metadata": {
+        "version": "1.0.0",
+        "generatedBy": "manual",
+        "templateVersion": "1.1.0"
+    }
+}

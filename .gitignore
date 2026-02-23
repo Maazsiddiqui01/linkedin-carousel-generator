@@ -1,0 +1,38 @@
+# Dependencies
+node_modules/
+
+# Build outputs
+output/images/
+output/pdf/
+output/generated_images/
+output/generated_charts/
+
+# Logs (keep changelog + docs)
+logs/*.json
+logs/research/
+logs/feedback/
+logs/performance/
+logs/backups/
+
+# Local auth/secrets artifacts
+auth_url.txt
+pkce_verifier.txt
+scripts/canva_tokens.json
+
+# Build/runtime logs
+output.log
+*.log
+!logs/changes.md
+
+# Personal content specs (not for public repo)
+content/final/20260209_durriya_convocation.json
+content/final/20260219_maaz_gsk_farewell.json
+content/final/20260223_maaz_gsk_farewell_production.json
+brand/graduation-memes-13.png
+brand/assets/Durriya Avatar.png
+
+# OS/Editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

@@ -1,0 +1,127 @@
+{
+  "slug": "20260223_regression_workflow_numbering",
+  "title": "Regression - Workflow Numbering",
+  "audience": "QA",
+  "createdAt": "2026-02-23T16:21:00Z",
+  "profile": {
+    "name": "Tester",
+    "avatar": "avatar.png"
+  },
+  "showRepostBadge": false,
+  "slides": [
+    {
+      "type": "cover",
+      "headline": "Workflow Numbering Regression",
+      "subtitle": "Only workflow-intent slides should show Workflow N"
+    },
+    {
+      "type": "framing",
+      "headline": "Setup",
+      "accentText": "Mixed intent deck",
+      "bullets": [
+        "Two workflow slides",
+        "One result slide in between",
+        "No forced workflow badge on result slide"
+      ],
+      "diagram": [
+        "Input",
+        "Run",
+        "Review",
+        "Ship"
+      ]
+    },
+    {
+      "type": "body",
+      "intent": "workflow",
+      "headline": "Workflow 1: Intake and Grounding",
+      "introText": "Start with context capture and tool checks",
+      "bullets": [
+        "Collect prompt and constraints",
+        "Load target files and references",
+        "Confirm output format and audience"
+      ],
+      "visual": {
+        "mode": "cards",
+        "cards": [
+          {
+            "icon": "1",
+            "title": "Scope Alignment",
+            "detail": "Set objective, audience, and output format first."
+          },
+          {
+            "icon": "2",
+            "title": "Context Intake",
+            "detail": "Load required files before writing copy."
+          },
+          {
+            "icon": "3",
+            "title": "Delivery Contract",
+            "detail": "Confirm artifacts and acceptance criteria."
+          }
+        ]
+      }
+    },
+    {
+      "type": "body",
+      "intent": "result",
+      "headline": "Early Outcomes",
+      "introText": "Quality improves before full rollout",
+      "bullets": [
+        "Cleaner structure from day one",
+        "Fewer edits in final pass",
+        "Higher confidence in output quality"
+      ],
+      "visual": {
+        "mode": "kpi",
+        "stats": [
+          {
+            "value": "3",
+            "label": "Outcome Signals"
+          },
+          {
+            "value": "1",
+            "label": "Initial Iteration"
+          }
+        ]
+      }
+    },
+    {
+      "type": "body",
+      "intent": "workflow",
+      "headline": "Workflow 2: Visual Composition",
+      "introText": "Select the right visual mode per slide",
+      "bullets": [
+        "Use charts when explicit series exists",
+        "Use KPI cards for direct metrics",
+        "Hide panel when no relevant signal"
+      ],
+      "visual": {
+        "mode": "cards",
+        "cards": [
+          {
+            "icon": "1",
+            "title": "Mode Picker",
+            "detail": "Map slide signal to one visual mode."
+          },
+          {
+            "icon": "2",
+            "title": "Relevance Gate",
+            "detail": "Reject visuals that mirror bullet text."
+          },
+          {
+            "icon": "3",
+            "title": "Fallback Logic",
+            "detail": "Hide panel when signal is weak."
+          }
+        ]
+      }
+    },
+    {
+      "type": "cta",
+      "headline": "Need this QA checklist?",
+      "ctaText": "Comment QA for the template",
+      "handle": "@tester"
+    }
+  ],
+  "caption": "Regression fixture for workflow numbering."
+}
